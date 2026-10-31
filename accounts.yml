@@ -1,0 +1,10 @@
+build:
+  version: "3.0"
+
+accounts:
+  message: " Welcome to KPG Finance accounts related to local APIS"
+  contactDetails:
+    name: "Ansel"
+    email: "abvcq@gmail.com"
+  onCallSupport:
+    - "9782598851"

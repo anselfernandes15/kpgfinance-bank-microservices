@@ -1,0 +1,10 @@
+build:
+  version: "1.0"
+
+accounts:
+  message: " Welcome to KPG Finance accounts related to PROD APIS"
+  contactDetails:
+    name: "Anselprod"
+    email: "prod@gmail.com"
+  onCallSupport:
+    - "9782598851"

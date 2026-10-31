@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to kpgfinance loans prod"
+  contactDetails:
+    name: "Cristiano - Prod Owner"
+    email: "Cristiano@kpgfinance.com"
+  onCallSupport:
+    - "(723) 656-8709"
+    - "(156) 342-0956"

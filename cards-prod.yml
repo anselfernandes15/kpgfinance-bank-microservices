@@ -1,0 +1,10 @@
+build:
+  version: "1.0"
+
+cards:
+  message: " Welcome to KPG Finance cards PROD APIS"
+  contactDetails:
+    name: "Anselcardsprod"
+    email: "prodcards@gmail.com"
+  onCallSupport:
+    - "9782598851"

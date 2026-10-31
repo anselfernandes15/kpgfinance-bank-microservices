@@ -1,0 +1,10 @@
+build:
+  version: "2.0"
+
+accounts:
+  message: " Welcome to KPG Finance accounts related to QA APIS"
+  contactDetails:
+    name: "AnselQA"
+    email: "qa@gmail.com"
+  onCallSupport:
+    - "9782598851"
