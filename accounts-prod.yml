@@ -2,7 +2,7 @@ build:
   version: "1.0"
 
 accounts:
-  message: " Welcome to KPG Finance accounts related to PRODUCTION APIS"
+  message: " Welcome to KPG Finance accounts related to prod APIS"
   contactDetails:
     name: "Anselprod"
     email: "{cipher}77e75f344526bd1afc616abc35f57ec33f84971172ae831f2d0895958077c24a"
