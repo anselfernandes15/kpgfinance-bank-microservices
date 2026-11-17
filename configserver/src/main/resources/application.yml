@@ -12,6 +12,7 @@ spring:
 #          search-locations: classpath:/config
         git:
           uri: ${CONFIG_GIT_URI:https://github.com/anselfernandes15/kpgfinance-bank-microservices.git}
+          search-paths: configserver/src/main/resources/config
           # Only needed if the config repo is private. Supply via env vars /
           # a Kubernetes Secret - never commit real values.
           username: ${CONFIG_GIT_USERNAME:}
