@@ -1,0 +1,10 @@
+build:
+  version: "2.0"
+
+cards:
+  message: " Welcome to KPG Finance cards QA"
+  contactDetails:
+    name: "AnselcardsQA"
+    email: "cardsqa@gmail.com"
+  onCallSupport:
+    - "9782598851"

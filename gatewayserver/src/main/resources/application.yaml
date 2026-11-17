@@ -1,0 +1,104 @@
+
+spring:
+  application:
+    name: gatewayserver
+  reactor:
+    context-propagation: auto
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+    fail-fast: true
+    retry:
+        max-attempts: 6
+        initial-interval: 1500
+        multiplier: 1.5
+  cloud:
+    gateway:
+      server:
+        webflux:
+          httpclient:
+            connect-timeout: 1000
+            response-timeout: 10s
+    kubernetes:
+      discovery:
+        all-namespaces: true
+        enabled: true # explicitly defining k8 discovery server over here | Edge server
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://localhost:7080/realms/master/protocol/openid-connect/certs"
+
+
+  data:
+    redis:
+      connect-timeout: 2s
+      host: localhost
+      port: 6379
+      timeout: 1s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    gateway:
+      access: unrestricted
+  opentelemetry:
+    resource-attributes:
+      service.name: ${spring.application.name}
+      deployment.environment: "development"
+    logging:
+      export:
+        otlp:
+          endpoint: http://localhost:4318/v1/logs
+    tracing:
+      export:
+        otlp:
+          endpoint: http://localhost:4318/v1/traces
+  tracing:
+    sampling:
+      probability: 1.0
+  otlp:
+    metrics:
+      export:
+        url: http://localhost:4318/v1/metrics
+        step: 10s
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetchRegistry: true
+#    registerWithEureka: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8070/eureka/
+
+info:
+  app:
+    name: "gatewayserver"
+    description: "KPGFinance Gatewayserver app"
+    version: "1.0.0"
+
+logging:
+  pattern:
+    console: ${CONSOLE_LOG_PATTERN:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) %magenta([traceId=%X{traceId:-},spanId=%X{spanId:-}]) - %cyan(%msg%n)}
+  level:
+    com:
+      kpgfinance:
+        gatewayserver: DEBUG
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000

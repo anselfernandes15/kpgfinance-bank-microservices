@@ -1,0 +1,27 @@
+dependencies:
+- name: kpgfinance-common
+  repository: file://../kpgfinance-common
+  version: 0.1.0
+- name: configserver
+  repository: file://../kpgfinance-services/configserver
+  version: 0.1.0
+- name: discoveryserver
+  repository: file://../kpgfinance-services/discoveryserver
+  version: 0.1.0
+- name: accounts
+  repository: file://../kpgfinance-services/accounts
+  version: 0.1.0
+- name: loans
+  repository: file://../kpgfinance-services/loans
+  version: 0.1.0
+- name: cards
+  repository: file://../kpgfinance-services/cards
+  version: 0.1.0
+- name: gatewayserver
+  repository: file://../kpgfinance-services/gatewayserver
+  version: 0.1.0
+- name: message
+  repository: file://../kpgfinance-services/message
+  version: 0.1.0
+digest: sha256:d79d67c58d7e35cf4f5894d45f6fd5166b068737215aa7f357273cee3127d1f1
+generated: "2026-11-12T01:56:57.1508753-05:00"

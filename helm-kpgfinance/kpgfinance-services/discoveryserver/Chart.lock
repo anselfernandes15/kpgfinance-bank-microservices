@@ -1,0 +1,6 @@
+dependencies:
+- name: kpgfinance-common
+  repository: file://../../kpgfinance-common
+  version: 0.1.0
+digest: sha256:86f2611a5c5e7ead62683888ddb1a9d13ef1ab3d320b88d326d987f586c23e1a
+generated: "2026-11-12T01:58:33.7395006-05:00"

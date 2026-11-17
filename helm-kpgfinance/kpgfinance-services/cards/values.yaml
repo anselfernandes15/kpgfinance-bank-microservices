@@ -1,0 +1,35 @@
+deploymentName: cards-deployment
+serviceName: cards
+appLabel: cards
+
+replicaCount: 1
+
+image:
+  repository: anselfernandes7/cards
+  tag: s17
+
+containerPort: 9002
+
+service:
+  port: 9002
+  targetPort: 9002
+
+profileEnabled: true
+configImportEnabled: true
+discoveryEnabled: true
+jwkEnabled: false
+redisEnabled: false
+kafkaEnabled: false
+otelEnabled: true
+
+resources:
+  requests:
+    cpu: 250m
+    memory: 384Mi
+  limits:
+    cpu: 500m
+    memory: 700Mi
+
+startupProbe:
+  failureThreshold: 30
+  periodSeconds: 5

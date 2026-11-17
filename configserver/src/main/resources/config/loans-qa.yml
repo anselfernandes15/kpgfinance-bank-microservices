@@ -1,0 +1,10 @@
+build:
+  version: "2.0"
+
+loans:
+  message: "Welcome to kpgfinance loans qa "
+  contactDetails:
+    name: "Lamine Yamal - QA Lead"
+    email: "Lamine@kpgfinance.com"
+  onCallSupport:
+    - "(785) 545-6565"

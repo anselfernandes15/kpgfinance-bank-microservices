@@ -1,0 +1,28 @@
+# ---- Build output ----
+target/
+build/
+*.class
+*.jar
+!**/.mvn/wrapper/maven-wrapper.jar
+
+# ---- IDE ----
+.idea/
+*.iml
+.vscode/
+*.swp
+.DS_Store
+
+# ---- Build-script logs (contain local machine paths) ----
+build-scripts/.build-logs/
+
+# ---- Helm: vendored dependency archives are rebuilt with `helm dependency build` ----
+helm-kpgfinance/**/charts/*.tgz
+
+# ---- Secrets / local overrides - never commit ----
+.env
+.env.*
+*.pem
+*.key
+*-secret.yaml
+*-secrets.local.yaml
+values-local.yaml

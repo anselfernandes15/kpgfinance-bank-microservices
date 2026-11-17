@@ -1,0 +1,39 @@
+apiVersion: v2
+name: kpgfinance-platform
+description: Top-level umbrella chart - installs the entire kpgfinance platform (infra + all microservices) in one release
+type: application
+version: 0.1.0
+appVersion: "s17"
+
+dependencies:
+  - name: kpgfinance-common
+    version: 0.1.0
+    repository: "file://../kpgfinance-common"
+
+  - name: configserver
+    version: 0.1.0
+    repository: "file://../kpgfinance-services/configserver"
+
+  - name: discoveryserver
+    version: 0.1.0
+    repository: "file://../kpgfinance-services/discoveryserver"
+
+  - name: accounts
+    version: 0.1.0
+    repository: "file://../kpgfinance-services/accounts"
+
+  - name: loans
+    version: 0.1.0
+    repository: "file://../kpgfinance-services/loans"
+
+  - name: cards
+    version: 0.1.0
+    repository: "file://../kpgfinance-services/cards"
+
+  - name: gatewayserver
+    version: 0.1.0
+    repository: "file://../kpgfinance-services/gatewayserver"
+
+  - name: message
+    version: 0.1.0
+    repository: "file://../kpgfinance-services/message"
